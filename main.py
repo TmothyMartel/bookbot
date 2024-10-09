@@ -1,13 +1,21 @@
 def main():
-    print_book("./books/frankenstein.txt")
-
-main()
+    book_path = "./books/frankenstein.txt"
+    text = print_book(book_path)
+    word_count = count_words(text)
+    return print(word_count)
 
 
 def print_book(path):
     with open(path) as f:
         file_contents = f.read()
-        print(file_contents)
+        return file_contents
+
+def count_words(text):
+    words = text.split()
+    return len(words)
+
+main()
+ 
 
 # boot-dev solution:
 # def main():
