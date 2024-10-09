@@ -1,12 +1,13 @@
 def main():
-    with open("./books/frankenstein.txt") as f:
-        file_contents = f.read()
-        print(file_contents)
+    print_book("./books/frankenstein.txt")
 
 main()
 
 
-
+def print_book(path):
+    with open(path) as f:
+        file_contents = f.read()
+        print(file_contents)
 
 # boot-dev solution:
 # def main():
